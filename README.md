@@ -31,3 +31,10 @@ The `/test_mil.py` will help you test pretrained MIL models like this:
 python test_mil.py --yaml_path /configs/STA_MIL.yaml --test_dataset_csv /your/test_csv/path --model_weight_path /your/model_weights/path --test_log_dir /your/test/log/dir
 ```
 You should ensure the `--test_dataset_csv` contains the column of `test_slide_path` which contains the `/path/to/your_pt.pt`. If `--test_dataset_csv` also contains the 'test_slide_label' column, the metrics will be calculated and written to logs.
+
+
+### :beers: **Acknowledgement**
+Thanks to the following repositories for inspiring this repository
+  - https://github.com/mahmoodlab/CLAM
+  - https://github.com/lingxitong/MIL_BASELINE
+
