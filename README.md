@@ -16,18 +16,18 @@ Incomplete version
 
 ### :fire: **Train/Test MIL**
 #### **Yaml Config**
-You can config the yaml-file in `/configs`. For example, `/configs/AB_MIL.yaml`, A detailed explanation has been written in  `/configs/AB_MIL.yaml`. 
+You can config the yaml-file in `/configs`. For example, our `DSPA-MIL`: `/configs/STA_MIL.yaml`, A detailed explanation has been written in  `/configs/STA_MIL.yaml`. 
 #### **Train & Test**
 Then, `/train_mil.py` will help you like this:
 ``` shell
-python train_mil.py --yaml_path /configs/AB_MIL.yaml 
+python train_mil.py --yaml_path /configs/STA_MIL.yaml 
 ```
-We also support dynamic parameter passing, and you can pass any parameters that exist in the `/configs/AB_MIL.yaml` file, for example:
+We also support dynamic parameter passing, and you can pass any parameters that exist in the `/configs/STA_MIL.yaml` file, for example:
 ``` shell
-python train_mil.py --yaml_path /configs/AB_MIL.yaml --options General.seed=2024 General.num_epochs=20 Model.in_dim=768
+python train_mil.py --yaml_path /configs/STA_MIL.yaml --options General.seed=2024 General.num_epochs=20 Model.in_dim=768
 ```
 The `/test_mil.py` will help you test pretrained MIL models like this:
 ``` shell
-python test_mil.py --yaml_path /configs/AB_MIL.yaml --test_dataset_csv /your/test_csv/path --model_weight_path /your/model_weights/path --test_log_dir /your/test/log/dir
+python test_mil.py --yaml_path /configs/STA_MIL.yaml --test_dataset_csv /your/test_csv/path --model_weight_path /your/model_weights/path --test_log_dir /your/test/log/dir
 ```
 You should ensure the `--test_dataset_csv` contains the column of `test_slide_path` which contains the `/path/to/your_pt.pt`. If `--test_dataset_csv` also contains the 'test_slide_label' column, the metrics will be calculated and written to logs.
